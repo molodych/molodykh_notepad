@@ -12,6 +12,27 @@
             <RowDefinition/>
             <RowDefinition Height="25"/>
         </Grid.RowDefinitions>
-        
+        <Menu x:Name="mainMenu" Grid.Row="0">
+            <MenuItem Header="Файл">
+                <MenuItem x:Name="createFileButton" Header="Создать" Click="createFileButton_Click"/>
+                <MenuItem x:Name="openFileButton" Header="Открыть" Click="openFileButton_Click"/>
+                <Separator/>
+                <MenuItem Header="Сохранить"/>
+                <MenuItem Header="Сохранить как..."/>
+                <MenuItem Header="Сохранить все"/>
+                <Separator/>
+                <MenuItem Header="Выход"/>
+            </MenuItem>
+            <MenuItem Header="Вид">
+                <MenuItem Header="Масштаб">
+                    <MenuItem x:Name="plusSizeSet" Header="Увеличить"/>
+                    <MenuItem x:Name="minusSizeSet" Header="Уменьшить"/>
+                    <MenuItem x:Name="defaultSizeSet" Header="Восстановить по умолчанию"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Справка"/>
+        </Menu>
+        <TabControl x:Name="mainTabControl" Grid.Row="1"/>
+        <TextBlock x:Name="dataText" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right"/>
     </Grid>
 </Window>
